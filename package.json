@@ -1,0 +1,93 @@
+{
+  "name": "@kainstar/typescript-react-library-package",
+  "version": "1.0.1",
+  "description": "A template for creating react library packages using TypeScript",
+  "main": "./lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "cm": "cz",
+    "clean": "rimraf lib",
+    "lint": "eslint src",
+    "prepare": "is-ci || husky install",
+    "semantic-release": "semantic-release",
+    "test:watch": "jest --watch",
+    "test": "jest --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kainstar/typescript-react-library-package.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kainstar",
+    "email": "15249633+kainstar@users.noreply.github.com",
+    "url": "https://github.com/kainstar"
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
+  "keywords": [
+    "boilerplate",
+    "template",
+    "typescript",
+    "react",
+    "semantic-release"
+  ],
+  "bugs": {
+    "url": "https://github.com/kainstar/typescript-react-library-package/issues"
+  },
+  "homepage": "https://github.com/kainstar/typescript-react-library-package#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.27",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  }
+}
