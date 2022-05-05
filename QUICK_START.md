@@ -14,17 +14,7 @@ Fork from [typescript-npm-package-template](https://github.com/kainstar/typescri
 - prettier
 - commitlint
 - semantic-release
-- docs
-- vite
-
-## Changes
-
-- Newer dependencies version
-- ESLint version and rules
-- remove prepare-commit-msg hooks, use [commitlint](https://github.com/conventional-changelog/commitlint) instead
-- Configuration File Location
-- Windows and linux compatible
-- Private customization
+- docusaurus
 
 ## Getting started
 
@@ -48,7 +38,7 @@ Linux or MacOS:
 NPM_PKG_NAME="pkg-name"
 REPO_NAME="repo-name"
 
-sed -i "s/@kainstar\/typescript-react-library-package-template|my-package-name/$NPM_PKG_NAME/g; s/typescript-react-library-package-template/$REPO_NAME/g" package.json README.md
+sed -i "s/@kainstar\/typescript-react-library-package-template|my-package-name/$NPM_PKG_NAME/g; s/typescript-react-library-package-template/$REPO_NAME/g" package.json README.md site/docusaurus.config.js site/tsconfig.json site/src/theme/ReactLiveScope/index.js
 ```
 
 Windows:
@@ -57,7 +47,7 @@ Windows:
 $NPM_PKG_NAME="pkg-name"
 $REPO_NAME="repo-name"
 
-foreach ($File in @("package.json", "README.md")) {
+foreach ($File in @("package.json", "README.md", "site/docusaurus.config.js", "site/tsconfig.json", "site/src/theme/ReactLiveScope/index.js")) {
   (Get-Content $File) | %{$_ -replace "@kainstar/typescript-react-library-package-template|my-package-name", $NPM_PKG_NAME} | %{$_ -replace "typescript-react-library-package-template", $REPO_NAME} | Set-Content $File
 }
 ```

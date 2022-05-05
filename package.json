@@ -1,5 +1,5 @@
 {
-  "name": "@kainstar/typescript-react-library-package",
+  "name": "@kainstar/typescript-react-library-package-template",
   "version": "1.0.1",
   "description": "A template for creating react library packages using TypeScript",
   "main": "./lib/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kainstar/typescript-react-library-package.git"
+    "url": "git+https://github.com/kainstar/typescript-react-library-package-template.git"
   },
   "license": "MIT",
   "author": {
@@ -38,9 +38,9 @@
     "semantic-release"
   ],
   "bugs": {
-    "url": "https://github.com/kainstar/typescript-react-library-package/issues"
+    "url": "https://github.com/kainstar/typescript-react-library-package-template/issues"
   },
-  "homepage": "https://github.com/kainstar/typescript-react-library-package#readme",
+  "homepage": "https://github.com/kainstar/typescript-react-library-package-template#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
