@@ -6,5 +6,5 @@ interface IProps {
 
 export const ReactComponent: FC<IProps> = (props) => {
   const { name } = props;
-  return <div>The name prop value is {name}</div>;
+  return <div className="font">The name prop value is {name}</div>;
 };

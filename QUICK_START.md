@@ -8,10 +8,10 @@ Fork from [typescript-npm-package-template](https://github.com/kainstar/typescri
 
 - React 18 Supports
 - Typescript
-- css-in-js
+- Sass
 - Jest
 - ESLint
-- prettier
+- Prettier
 - commitlint
 - semantic-release
 - docusaurus
