@@ -3,9 +3,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'site/**'
 jobs:
-  deploy-doc:
-    name: Deploy to GitHub Pages
+  deploy:
+    name: Build Docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,20 +28,21 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Website dependencies
-        working-directory: site
-        run: pnpm install
+        run: |
+          cd site
+          pnpm install
       - name: Build
-        working-directory: site
-        run: pnpm build
+        run: |
+          cd site
+          pnpm build
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        working-directory: site
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
+          publish_dir: ./site/build
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
