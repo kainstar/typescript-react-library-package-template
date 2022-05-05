@@ -7,7 +7,9 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "pnpm build:ts && pnpm build:scss",
+    "build:ts": "tsc",
+    "build:scss": "sass src:lib",
     "cm": "cz",
     "clean": "rimraf lib",
     "lint": "eslint src",
@@ -73,6 +75,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rimraf": "^3.0.2",
+    "sass": "^1.51.0",
     "semantic-release": "^19.0.2",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
